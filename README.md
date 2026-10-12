@@ -15,6 +15,9 @@ fixtures so browser and page cleanup is managed by the plugin.
 
 ```text
 python-playwright-pom/
+|-- .github/
+|   `-- workflows/
+|       `-- tests.yml
 |-- pages/
 |   |-- base_page.py
 |   |-- home_page.py
@@ -99,11 +102,24 @@ Open `reports/report.html` in a browser to review the report. A screenshot is
 automatically captured for each test that fails during its test phase and saved
 in `screenshots/`.
 
+## Continuous integration with GitHub Actions
+
+The workflow in `.github/workflows/tests.yml` runs the test suite on pushes and
+pull requests targeting `main`, and can also be started manually from the
+repository's **Actions** tab. It installs Python dependencies and Chromium,
+generates an HTML report, and uploads the report and any failure screenshots as
+a downloadable artifact, including when a test fails.
+
+After pushing this project to GitHub, open the **Actions** tab in the repository
+to see each run. No repository secrets are required for these public-site tests.
+Because they exercise a live website, network outages or site changes can cause
+CI failures unrelated to changes in this project.
+
 ## Included scenarios
 
 - TC001: Homepage opens and displays the QAFox logo.
 - TC002: Homepage title matches the title observed on the live site.
-- TC003: Homepage's Browse navigation control is visible.
+- TC003: Homepage's Courses navigation link is visible.
 - TC004: Expected primary homepage content is visible.
 - TC005: Homepage URL is correct.
 - Navigation: The verified “170 plus Software Testing Types” link opens its
