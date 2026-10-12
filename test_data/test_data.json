@@ -2,5 +2,15 @@
   "home_page_title": "Home - QAFox",
   "primary_content_heading": "Free Tutorial & Video Courses",
   "verified_navigation_link": "170 plus Software Testing Types",
-  "software_testing_types_title": "170 plus Software Testing Types - QAFox"
+  "software_testing_types_title": "170 plus Software Testing Types - QAFox",
+  "search_cases": [
+    {
+      "term": "selenium",
+      "expected_result": "Performance Testing with Selenium: Can Selenium Be Used for Load Testing"
+    },
+    {
+      "term": "agile",
+      "expected_result": "Jira Agile Management Tool – A Detailed, Complete, Easy and from Scratch Tutorial for Beginners"
+    }
+  ]
 }

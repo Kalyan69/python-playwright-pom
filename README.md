@@ -21,14 +21,16 @@ python-playwright-pom/
 |-- pages/
 |   |-- base_page.py
 |   |-- home_page.py
-|   `-- navigation_page.py
+|   |-- navigation_page.py
+|   `-- search_results_page.py
 |-- reports/
 |-- screenshots/
 |-- test_data/
 |   `-- test_data.json
 |-- tests/
 |   |-- test_home_page.py
-|   `-- test_navigation.py
+|   |-- test_navigation.py
+|   `-- test_search.py
 |-- utils/
 |   `-- config.py
 |-- conftest.py
@@ -124,6 +126,8 @@ CI failures unrelated to changes in this project.
 - TC005: Homepage URL is correct.
 - Navigation: The verified “170 plus Software Testing Types” link opens its
   QAFox article.
+- Data-driven search: terms and expected first results are defined in
+  `test_data/test_data.json` and run as separate pytest cases.
 
 These tests depend on the live website, so a site outage, redesign, network
 issue, or anti-automation response can cause failures unrelated to the
