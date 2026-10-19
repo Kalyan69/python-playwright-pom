@@ -144,4 +144,4 @@ framework.
   QAFox URL in a regular browser; the website may be unavailable or may have
   changed.
 - **The report command cannot write the report:** Confirm that `reports` exists
-  and that the project folder is writable.
+  and that the project folder is writable..
